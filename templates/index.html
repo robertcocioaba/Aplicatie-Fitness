@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness App - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <h1 style="font-size: 24px; margin-bottom: 35px;">Welcome to the Fitness Status</h1>
+    
+    <form action="/generate_plan" method="post" style="display: flex; flex-direction: column; align-items: center;">
+        <label for="age" style="font-size: 20px; margin-bottom: 35px;">Age:</label>
+        <input type="text" id="age" name="age" required style="font-size: 16px; margin-bottom: 35px;">
+
+        <label for="height" style="font-size: 20px; margin-bottom: 35px;">Height (cm):</label>
+        <input type="text" id="height" name="height" required style="font-size: 16px; margin-bottom: 35px;">
+
+        <label for="weight" style="font-size: 20px; margin-bottom: 35px;">Weight (kg):</label>
+        <input type="text" id="weight" name="weight" required style="font-size: 16px; margin-bottom: 35px;">
+
+        <button type="submit" style="font-size: 20px;">Generate Workout Plan</button>
+    </form>
+</body>
+</html>
